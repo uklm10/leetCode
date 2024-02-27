@@ -7,10 +7,10 @@ public:
             numsCount[nums[i]]++;
         }
         int majority = nums.size() / 2;
-        for (auto iter = numsCount.begin(); iter != numsCount.end(); ++iter)
+        for (auto i = numsCount.begin(); i != numsCount.end(); ++i)
         {
-            if (iter->second > majority)
-                return iter->first;
+            if (i->second > majority)
+                return i->first;
         }
         return 0; 
     }
